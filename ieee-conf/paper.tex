@@ -1,0 +1,154 @@
+% Thanks IEEE and Michael Shell
+\documentclass[conference]{IEEEtran}
+% Add the compsoc option for Computer Society conferences.
+
+% if then else
+\usepackage{etoolbox}
+
+% floats and fancy boxes
+\usepackage{subcaption}
+\usepackage{fancyvrb}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{arydshln}
+
+% babel
+\usepackage[english]{babel}
+
+% math symbols
+\usepackage{amsmath}
+\DeclareMathOperator*{\eq}{==}
+\usepackage{amssymb}
+\usepackage{ulem}
+\normalem
+\usepackage{array}
+\usepackage{graphicx}
+
+% for better ending page formating
+\usepackage{balance}
+
+% for pretty-printing URLs
+\usepackage[hyphens]{url}
+
+% algorithm blocks
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+% colors
+\usepackage{color}
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+% code snippets
+\usepackage{listings}
+% \renewcommand{\lstlistingname}{Snippet}
+\lstset{language=Java,
+basicstyle=\ttfamily \footnotesize,
+columns=fullflexible,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+stepnumber=1,
+%numbers=left,
+numbersep=3pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false,
+captionpos=b
+}
+
+% my favs
+\newcommand{\p}{Project\-Name}
+\newcommand{\cameraready}[2]{#1} % change to #2 for camera ready
+\newcommand{\comments}[1]{}
+\newcommand{\fixme}[1]{{\bf FIXME: #1}}
+
+\makeatletter
+\let\@copyrightspace\relax
+\makeatother
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Bare Demo of IEEEtran.cls for Conferences}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{%
+\IEEEauthorblockN{Mingyuan Xia}
+\IEEEauthorblockA{McGill University\\
+mingyuan.xia@mail.mcgill.ca\\
+http://mxia.me
+}
+%\and
+}
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+
+The abstract goes here.
+\end{abstract}
+
+\cameraready{}{
+\begin{IEEEkeywords}
+blabla; dada; haha;
+\end{IEEEkeywords}
+}
+
+\IEEEpeerreviewmaketitle
+
+
+
+\section{Introduction}
+This demo file is intended to serve as a ``starter file''
+for IEEE conference papers produced under \LaTeX\ using
+IEEEtran.cls version 1.7 and later.
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+I wish you the best of success.
+
+\hfill mds
+ 
+\hfill January 11, 2007
+
+Packages could be found at CTAN~\cite{greenwade93}.
+\subsection{Subsection Heading Here}
+Subsection text here.
+
+
+\subsubsection{Subsubsection Heading Here}
+Subsubsection text here.
+
+
+\section{Conclusion}
+The conclusion goes here.
+
+\cameraready{}{
+\section*{Acknowledgment}
+The authors would like to thank...
+}
+
+% I normally balance the pages before bibs
+\balance
+\bibliographystyle{IEEEtran}
+\bibliography{example} % put real bibs
+
+
+% that's all folks
+\end{document}
