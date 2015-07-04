@@ -1,0 +1,123 @@
+% Thanks ACM
+\documentclass{sig-alternate}
+
+% if then else
+\usepackage{etoolbox}
+
+% floats and fancy boxes
+\usepackage{subcaption}
+\usepackage{fancyvrb}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{arydshln}
+
+% babel
+\usepackage[english]{babel}
+
+% math symbols
+\usepackage{amsmath}
+\DeclareMathOperator*{\eq}{==}
+\usepackage{amssymb}
+\usepackage{ulem}
+\normalem
+\usepackage{array}
+\usepackage{graphicx}
+
+% for better ending page formating
+\usepackage{balance}
+
+% for pretty-printing URLs
+\usepackage[hyphens]{url}
+
+% algorithm blocks
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+% colors
+\usepackage{color}
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+% code snippets
+\usepackage{listings}
+% \renewcommand{\lstlistingname}{Snippet}
+\lstset{language=Java,
+basicstyle=\ttfamily \footnotesize,
+columns=fullflexible,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+stepnumber=1,
+%numbers=left,
+numbersep=3pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false,
+captionpos=b
+}
+
+% my favs
+\newcommand{\p}{Project\-Name}
+\newcommand{\cameraready}[2]{#1} % change to #2 for camera ready
+\newcommand{\comments}[1]{}
+\newcommand{\fixme}[1]{{\bf FIXME: #1}}
+
+\makeatletter
+\let\@copyrightspace\relax
+\makeatother
+
+
+\begin{document}
+%
+% --- Author Metadata here ---
+\conferenceinfo{WOODSTOCK}{'97 El Paso, Texas USA}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\title{Alternate {\ttlit ACM} SIG Proceedings Paper in LaTeX
+Format\titlenote{Permission block removed. Comment them for camera ready version.}}
+%\subtitle{[Extended Abstract]
+
+\numberofauthors{1}
+\author{
+\alignauthor
+Mingyuan Xia\\
+       \affaddr{McGill University}\\
+       \email{mingyuan.xia@mail.mcgill.ca}\\
+       \affaddr{\url{http://mxia.me}}
+%\and  % use '\and' for another row
+}
+
+\maketitle
+\begin{abstract}
+Abstract goes here.
+\end{abstract}
+
+\cameraready{}{
+% A category with the (minimum) three required fields
+\category{H.4}{Information Systems Applications}{Miscellaneous}
+%A category including the fourth, optional field follows...
+\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+
+\terms{Theory}
+
+\keywords{ACM proceedings, \LaTeX, text tagging}
+}
+
+\section{Introduction}
+Packages are available at CTAN~\cite{greenwade93}.
+
+
+\balance
+{\footnotesize \bibliographystyle{abbrv}
+\bibliography{example}}
+
+% That's all folks!
+\end{document}
